@@ -87,8 +87,11 @@ class IMG_Folder(torch.utils.data.Dataset):
         # Create a mapping from subject ID to metadata for faster lookup
         self.metadata = {}
         for f in self.table_refer:
+            # print('f:- ',f)
+            # print('f[1]:- ', f[1])
             sid = str(f[0])
-            slabel = int(f[1])
+            # slabel = int(f[1])
+            slabel = f[1]
             smale = f[2]
             self.metadata[sid] = (slabel, smale)
 
@@ -111,7 +114,8 @@ class IMG_Folder(torch.utils.data.Dataset):
             # Find manually if not in mapping (fallback)
             for f in self.table_refer:
                 sid = str(f[0])
-                slabel = int(f[1])
+                # slabel = int(f[1])
+                slabel = f[1]
                 smale = f[2]
                 if sid == sub_fn:
                     break

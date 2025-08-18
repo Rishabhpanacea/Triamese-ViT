@@ -1,7 +1,7 @@
 import torch.nn as nn
 
 import torch
-from model.vit import VisionTransformer
+from Models.vit import VisionTransformer
 from xgboost import XGBClassifier
 
 

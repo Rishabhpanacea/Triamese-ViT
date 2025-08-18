@@ -296,7 +296,7 @@ def train(train_loader, model, criterion1,  optimizer, device, epoch):
     Returns:
         [float]: training loss average and MAE average
     '''
-    
+
     losses = AverageMeter()
     MAE = AverageMeter()
     #LOSS1 = AverageMeter()
